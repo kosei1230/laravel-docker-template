@@ -21,9 +21,13 @@ class TodoRequest extends FormRequest
      *
      * @return array
      */
+
+    //  バリデーション
     public function rules()
     {
         return [
+            // 文字数の条件と文字の有無
+        
             'content' => 'required|max:255',
         ];
     }
@@ -31,6 +35,8 @@ class TodoRequest extends FormRequest
     public function messages()
     {
         return [
+            // エラー文の内容
+
             'content.required' => 'ToDoが入力されていません。',
             'content.max' => 'ToDoは :max 文字以内で入力してください。',
         ];

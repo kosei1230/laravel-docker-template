@@ -8,6 +8,7 @@
     <div class="card">
       <div class="card-header">ToDo作成</div>
       <div class="card-body">
+        {{-- action属性に埋め込むURLを生成しています --}}
         <form method="POST" action="{{ route('todo.store') }}">
           @csrf
           <div class="form-group row">
