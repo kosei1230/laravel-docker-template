@@ -6,7 +6,7 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     ports:
-      - 3306:3306
+      - 3308:3308
     environment:
       - MYSQL_ROOT_PASSWORD=secret
       - MYSQL_DATABASE=laravel_app
@@ -18,7 +18,7 @@ services:
       - ./src:/var/www/src
       - ./php/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
     ports:
-      - 8080:80
+      - 8088:80
     depends_on:
       - mysql
 volumes:
